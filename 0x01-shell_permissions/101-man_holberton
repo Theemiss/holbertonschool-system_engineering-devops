@@ -1,1 +1,15 @@
-.TH eniac man page
+.\" Manpage for eniac.
+.TH man 2 "Thu, 10 Sep 2020" "0.35" "eniac man page"
+.SH NAME
+eniac \- the first electronic general-purpose digital computer
+.SH SYNOPSIS
+eniac [USERNAME]
+.SH DESCRIPTION
+nuseradd is high level shell program for adding users to LDAP server.  On Debian, administrators should usually use nuseradd.debian(8) instead.
+.SH OPTIONS
+eniac  does not take any options.
+.SH SEE ALSO 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Holberton school TUN
