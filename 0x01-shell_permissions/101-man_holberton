@@ -1,4 +1,5 @@
-
+.\" Manpage for eniac.
+.\" Contact midinfotn401@gmail.com to correct errors or typos.
 .TH man 2 "10 December 1945" "0.32" "eniac man page"
 .SH NAME
 .B eniac
