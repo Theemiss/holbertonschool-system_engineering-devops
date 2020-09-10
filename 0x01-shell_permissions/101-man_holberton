@@ -1,17 +1,17 @@
-.TH man2" 10 December 1945" "0.32" "holberton man page"
+
+.TH man 2 "10 December 1945" "0.32" "eniac man page"
 .SH NAME
-.B holberton
--shell permission holberton school project
+.B eniac
+-the first electronic general-purpose digital computer.
 .SH SYNOPSIS
-holberton [USERNAME]
+eniac
 .SH DESCRIPTION
-Holberton School is a project-based alternative to college for the next generation of software engineers.
+eniac was turing-complete, and able  to solve "a large class of numerical problems" through reprogramming.
 .SH OPTIONS
-.B holberton
+.B eniac
 does not take any option.
 .SH SEE ALSO
-.I peerday(1),project(2)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Holberton school TUN
+University of Pennsylvania.
