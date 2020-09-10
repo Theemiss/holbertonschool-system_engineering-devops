@@ -1,14 +1,16 @@
-.\" Manpage for eniac.
-.TH man 2 "Thu, 10 Sep 2020" "0.35" "eniac man page"
+.TH man2" 10 December 1945" "0.32" "holberton man page"
 .SH NAME
-eniac \- the first electronic general-purpose digital computer
+.B holberton
+-shell permission holberton school project
 .SH SYNOPSIS
-eniac [USERNAME]
+holberton [USERNAME]
 .SH DESCRIPTION
-nuseradd is high level shell program for adding users to LDAP server.  On Debian, administrators should usually use nuseradd.debian(8) instead.
+Holberton School is a project-based alternative to college for the next generation of software engineers.
 .SH OPTIONS
-eniac  does not take any options.
-.SH SEE ALSO 
+.B holberton
+does not take any option.
+.SH SEE ALSO
+.I peerday(1),project(2)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
