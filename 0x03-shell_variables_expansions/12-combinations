@@ -1,0 +1,2 @@
+#!/bin/bash
+echo {{a..z}{a..n},{a..z}{p..z},{a..n}o,{p..z}o} | tr ' '' ' "\n" | sort 
