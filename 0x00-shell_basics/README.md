@@ -1,9 +1,9 @@
-#0x00. Shell, basics
+# 0x00. Shell, basics
 
 An introductory project to the Bourne-again Shell.
-##Scrpit Descriptions:
+## Scrpit Descriptions:
 
-    **0-current_working_directory** - prints the absolute path name of the current working directory.
+    ** 0-current_working_directory ** - prints the absolute path name of the current working directory.
 
     **1-listit** - displays the contents list of the current directory.
 
@@ -21,8 +21,8 @@ An introductory project to the Bourne-again Shell.
 
     **8-firstdelete** - deletes the file betty in /tmp/holberton.
 
-    **9-firstdirdeletion** - deletes the directory holberton in the /tmp/ directory.
-
+    ** 9-firstdirdeletion ** - deletes the directory holberton in the /tmp/ directory.
+    
     **10-back** - changes the working directory to the previous one.
 
     **11-lists** - lists all files, even ones that are normally hidden, in long format that are in the current directory, the parent of the current directory, and the /boot/ directory, in that order.
