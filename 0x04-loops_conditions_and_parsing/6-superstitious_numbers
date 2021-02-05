@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # counting from 1 to 20 with luck
-i="0"
+i="1"
 while [ $i -le 20 ]
 do
 	case $i in
@@ -18,8 +18,6 @@ do
 			;;
 		*)
 			echo "$i"
-			;;
-	
 	esac
 	((i++))
 done
