@@ -9,7 +9,7 @@ This repository contains programs written for the system engineering and DevOps 
 * [0x03. Shell, init files, variables and expansions](./0x03-shell_variables_expansions)
 * [0x04. Loops, conditions and parsing](./0x04-loops_conditions_and_parsing)
 # Author
-Ahmed Belhaj <[Theemiss](https://github.com/Theemiss)>
+* Ahmed Belhaj [Theemiss](https://github.com/Theemiss)
 
 <p align="center">
   <img src="http://www.holbertonschool.com/holberton-logo.png" alt="Holberton School logo">
