@@ -19,19 +19,18 @@ int infinite_while(void)
  *
  * Return: void
  */
-void main(void)
+int main(void)
 {
-	pid_t pid;
+	pid_t zombie;
 	int i;
 
 	for (i = 0; i < 5; i++)
 	{
-		pid = fork();
-		if (pid > 0)
-			printf("Zombie process created, PID: %u\n", pid);
-		else
-			exit(0);
+		zombie = fork();
+		if (!zombie)
+			return (0);
+		printf("Zombie process created, PID: %d\n", zombie);
 	}
 	infinite_while();
-
+	return (1);
 }
