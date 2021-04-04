@@ -11,4 +11,3 @@ file_line { 'Declare identity file':
   line    => '    IdentityFile ~/.ssh/holberton',
   replace => true
 }
-
