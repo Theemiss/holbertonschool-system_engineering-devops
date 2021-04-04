@@ -1,4 +1,4 @@
-# Setup a SSH client configuration file to connect to a server with RSA key.
+# Configure ssh config file
 
 file_line { 'Turn off passwd auth':
   path    => '/etc/ssh/ssh_config',
