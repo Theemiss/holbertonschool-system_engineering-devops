@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Fix by installing apache and changing output to hello holberton
+apt-get install apache2 -y
+echo "Hello Holberton" > /var/www/html/index.html
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
