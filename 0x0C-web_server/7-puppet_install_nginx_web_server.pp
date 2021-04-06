@@ -1,7 +1,8 @@
-# puppet web server setup
-package { 'nginx':
-  ensure   => present,
-  provider => 'apt'
+# Server nginx with puppet
+
+exec {'install':
+  command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
+  provider => shell,
 }
 
 file { '/var/www/html/index.html':
@@ -17,9 +18,7 @@ file_line { 'Rick Astley showtime':
   line   => '        rewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;'
 }
 
-service { 'nginx':
-  ensure     => running,
-  enable     => true,
-  hasrestart => true,
-  require    => Package['nginx'],
+exec {'run':
+  command  => 'sudo service nginx restart',
+  provider => shell,
 }
