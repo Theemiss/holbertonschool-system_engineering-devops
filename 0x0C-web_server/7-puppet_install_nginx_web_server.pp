@@ -1,6 +1,6 @@
 exec {'/usr/bin/env apt-get update':}
 exec {'/usr/bin/env apt-get install -y nginx':}
-exec {'/usr/bin/env mkdir -p /var/www/koeusiss/html':}
+exec {'/usr/bin/env mkdir -p /var/www/themis/html':}
 exec {'/usr/bin/env echo "Holberton School" > /var/www/themis/html/index.html':}
 exec {'/usr/bin/env echo "Ceci n\'est pas une page" > /var/www/themis/html/custom_404.html':}
 exec {'/usr/bin/env echo "server{
