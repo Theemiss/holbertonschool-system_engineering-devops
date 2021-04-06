@@ -1,34 +1,23 @@
-
-exec {'apt-get-update':
-  command => '/usr/bin/apt-get update'
+# Server nginx with puppet
+package {'nginx':
+  ensure => 'present',
 }
 
-package {'apache2.2-common':
-  ensure  => 'absent',
-  require => Exec['apt-get-update']
+exec {'install':
+  command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
+  provider => shell,
 }
 
-package { 'nginx':
-  ensure  => 'installed',
-  require => Package['apache2.2-common']
+exec {'Holberton':
+  command  => 'echo "Holberton School" | sudo tee /var/www/html/index.html',
+  provider => shell,
 }
 
-service {'nginx':
-  ensure  =>  'running',
-  require => file_line['perform a redirection'],
+exec {'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/www.youtube.com\/;\\n\\t}/" /etc/nginx/sites-available/default':
+  provider => shell,
 }
 
-file { '/var/www/html/index.nginx-debian.html':
-  ensure  => 'present',
-  content => 'Holberton School',
-  require =>  Package['nginx']
-}
-
-file_line { 'perform a redirection':
-  ensure  => 'present',
-  path    => '/etc/nginx/sites-enabled/default',
-  line    => 'rewrite ^/redirect_me/$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
-  after   => 'root /var/www/html;',
-  require => Package['nginx'],
-  notify  => Service['nginx'],
+exec {'run':
+  command  => 'sudo service nginx restart',
+  provider => shell,
 }
