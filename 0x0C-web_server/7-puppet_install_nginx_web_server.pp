@@ -8,13 +8,17 @@ exec {'install':
   provider => shell,
 }
 
-exec {'Holberton':
-  command  => 'echo "Holberton School" | sudo tee /var/www/html/index.html',
-  provider => shell,
+file { '/var/www/html/index.html':
+  ensure  => present,
+  path    => '/var/www/html/index.html',
+  content => 'Holberton School'
 }
 
-exec {'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/www.youtube.com\/;\\n\\t}/" /etc/nginx/sites-available/default':
-  provider => shell,
+file_line { 'Rick Astley showtime':
+  ensure => 'present',
+  path   => '/etc/nginx/sites-available/default',
+  after  => 'listen 80 default_server;',
+  line   => '        rewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;'
 }
 
 exec {'run':
