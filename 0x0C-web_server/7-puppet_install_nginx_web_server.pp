@@ -1,17 +1,34 @@
-exec {'/usr/bin/env apt-get update':}
-exec {'/usr/bin/env apt-get install -y nginx':}
-exec {'/usr/bin/env mkdir -p /var/www/themis/html':}
-exec {'/usr/bin/env echo "Holberton School" > /var/www/themis/html/index.html':}
-exec {'/usr/bin/env echo "Ceci n\'est pas une page" > /var/www/themis/html/custom_404.html':}
-exec {'/usr/bin/env echo "server{
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    root /var/www/themis/html;
-    index index.html index.htm;
-    server_name ahmed-dev.tech;
-    rewrite ^/redirect_me$ https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;
-    error_page 404 /custom_404.html;
-}" > /etc/nginx/sites-available/ahmed-dev.tech':}
-exec {'/usr/bin/env sudo rm /etc/nginx/sites-enabled/default':}
-exec {'/usr/bin/env sudo ln -s /etc/nginx/sites-available/koeusiss.tech /etc/nginx/sites-enabled/':}
-exec {'/usr/bin/env sudo service nginx restart':}
+
+exec {'apt-get-update':
+  command => '/usr/bin/apt-get update'
+}
+
+package {'apache2.2-common':
+  ensure  => 'absent',
+  require => Exec['apt-get-update']
+}
+
+package { 'nginx':
+  ensure  => 'installed',
+  require => Package['apache2.2-common']
+}
+
+service {'nginx':
+  ensure  =>  'running',
+  require => file_line['perform a redirection'],
+}
+
+file { '/var/www/html/index.nginx-debian.html':
+  ensure  => 'present',
+  content => 'Holberton School',
+  require =>  Package['nginx']
+}
+
+file_line { 'perform a redirection':
+  ensure  => 'present',
+  path    => '/etc/nginx/sites-enabled/default',
+  line    => 'rewrite ^/redirect_me/$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
+  after   => 'root /var/www/html;',
+  require => Package['nginx'],
+  notify  => Service['nginx'],
+}
