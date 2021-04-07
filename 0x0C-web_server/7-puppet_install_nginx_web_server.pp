@@ -11,11 +11,13 @@ file { '/var/www/html/index.html':
   content => 'Holberton School'
 }
 
-file_line { 'Rick Astley showtime':
-  ensure => 'present',
-  path   => '/etc/nginx/sites-available/default',
-  after  => 'listen 80 default_server;',
-  line   => '        rewrite ^/redirect_me https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;'
+file_line { 'perform a redirection':
+  ensure  => 'present',
+  path    => '/etc/nginx/sites-enabled/default',
+  line    => 'rewrite ^/redirect_me/$ https://www.youtube.com/watch?v=dQw4w9WgXcQ permanent;',
+  after   => 'root /var/www/html;',
+  require => Package['nginx'],
+  notify  => Service['nginx'],
 }
 
 exec {'run':
