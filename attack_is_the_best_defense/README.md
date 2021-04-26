@@ -1,6 +1,8 @@
 # Attack is the best defense
 
-## what is this
+## 0-0-sniffing
+
+### what is this
 
 Security is a vast topic, and network security is an important part of it. A lot of very sensitive information goes over networks that are used by many people, and some people might have bad intentions. Traffic going through a network can be intercepted by a malicious machine pretending to be another network device. Once the traffic is redirected to the malicious machine, the hacker can keep a copy of it and analyze it for potential interesting information. It is important to note that the traffic must then be forwarded to the actual device it was supposed to go (so that users and the system keep going as if nothing happened).
 
@@ -14,19 +16,19 @@ I wrote the script user_authenticating_into_server that performs the authenticat
 
 You can download the script user_authenticating_into_server here <https://intranet.hbtn.io/rltoken/GzCvsJxgywK6TKkfwTF3RQ>
 
-## Tools
+### Tools
 
 * wireshark
 * telnet
 * tcpdump
 
-## 0-0-sniffing
+### solution
 
 * The code in ASCII = bXlwYXNzd29yZDk4OTgh7
 
 * user name : mylogin
 
-## Packet
+### Packet
 
 ```packet
   0000   d8 b6 b7 a1 1f 63 cc b0 da 2a bf b6 08 00 45 10   .....c...*....E.
