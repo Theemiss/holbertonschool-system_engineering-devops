@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-import csv
-import sys
-import requests
 """
 Write a Python script that, using this REST API,
 for a given employee ID, returns information about
 his/her TODO list progress
 export data in the CSV format.
 """
+import csv
+import sys
+import requests
 
 
 if __name__ == '__main__':

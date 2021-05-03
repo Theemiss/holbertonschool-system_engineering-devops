@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-import json
-import sys
-import requests
 """
 Write a Python script that, using this REST API,
 for a given employee ID, returns information about
 his/her TODO list progress
 export data in the json format.
 """
+import json
+import sys
+import requests
 
 
 if __name__ == '__main__':
