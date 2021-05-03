@@ -6,8 +6,8 @@ his/her TODO list progress
 export data in the json format.
 """
 import json
-import sys
 import requests
+import sys
 
 
 if __name__ == '__main__':
