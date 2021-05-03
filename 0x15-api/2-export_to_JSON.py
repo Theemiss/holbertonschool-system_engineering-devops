@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import requests
-import sys
 import json
+import sys
+import requests
 """
 Write a Python script that, using this REST API,
 for a given employee ID, returns information about
@@ -19,7 +19,7 @@ if __name__ == '__main__':
                          .format(sys.argv[1])).json()
 
     with open("{}.json".format(id_c), "w") as user_id:
-            json.dump({id_c: [{
+        json.dump({id_c: [{
                 'task': task.get('title'),
                 'completed': task.get('completed'),
                 'username': users.get('username')

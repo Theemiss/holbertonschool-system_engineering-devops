@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-import requests
-import sys
 import json
+import requests
 """
 Write a Python script that, using this REST API,
 for a given employee ID, returns information about
